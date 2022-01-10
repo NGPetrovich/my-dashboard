@@ -1,0 +1,62 @@
+.flexbox-container {
+  display: flex;
+}
+
+.flexbox-item {
+  width: 200px;
+  margin: 10px;
+  border: 3px solid #333;
+  background-color: #dfdfdf;
+  padding: 50px 50px;
+}
+
+.flexbox-item-blank {
+  width: 200px;
+  margin: 10px;
+  background-color: white;
+  padding: 50px 50px;
+}
+
+.button {
+  height: 100px;
+  width: 100px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.h5 {
+  font-weight: normal
+}
+
+.input {
+  border-style: none;
+  border: turquoise;
+  border-bottom-style: solid;
+  border-width: 0.1em;
+  width: 16em;
+}
+
+.input-right {
+  background-color: #dfdfdf;
+  border-style: none;
+  border: turquoise;
+  border-bottom-style: solid;
+  border-width: 0.1em;
+  width: 16em;
+}
+
+/* Header */
+
+.header-title {
+  display: flex;
+  padding: 0em 1em;
+  border: turquoise;
+  border-bottom-style: solid;
+  border-width: 0.2em;
+}
+
+.header-h1 {
+  color: turquoise;
+  font-size: 1.5em;
+}

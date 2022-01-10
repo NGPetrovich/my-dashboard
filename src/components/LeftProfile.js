@@ -1,10 +1,10 @@
-import react from 'react';
-import '../index.css';
+import React from 'react';
+import './css/dashboard.css';
 
 const LeftProfile = () => {
     return (
-        <div className='flexbox-container'>
-            <div className='flexbox-item'>
+        <div>
+            <div className='flexbox-item-blank'>
                 <div>
                     <button className='button'>upload image</button>
                 </div>
@@ -12,16 +12,25 @@ const LeftProfile = () => {
                     <h2>Markus Jansen</h2>
                 </div>
                 <div>
-                    <p>Role:</p>
-                    <p>Software Developer</p>
+                    <h5 className='h5'>Role:</h5>
+                    <input
+                        className='input'
+                        placeholder="Software Developer"
+                    />
                 </div>
                 <div>
-                    <p>Email:</p>
-                    <p>markus.jansen@mediconsult.fi</p>
+                    <h5 className='h5'>Email:</h5>
+                    <input
+                        className='input'
+                        placeholder="markus.jansen@mediconsult.fi"
+                    />
                 </div>
                 <div>
-                    <p>City:</p>
-                    <p>Turku</p>
+                    <h5 className='h5'>City:</h5>
+                    <input
+                        className='input'
+                        placeholder="turku"
+                    />
                 </div>
             </div>
         </div>
