@@ -1,27 +1,44 @@
-import react from 'react';
-import '../index.css';
+import React from 'react';
+import './css/dashboard.css';
 
 const LeftProfile = () => {
+
+    function clickMe() {
+        alert("clickMe() function is working");
+    }
+
     return (
-        <div className='flexbox-container'>
-            <div className='flexbox-item'>
+        <div>
+            <div className='flexbox-item-blank'>
                 <div>
-                    <button className='button'>upload image</button>
+                    <button onClick={clickMe} className='image-button'>upload image</button>
                 </div>
-                <div className='flexbox-item-1'>
+                <div>
                     <h2>Markus Jansen</h2>
                 </div>
                 <div>
-                    <p>Role:</p>
-                    <p>Software Developer</p>
+                    <h5 className='h5'>Role:</h5>
+                    <input
+                        className='input'
+                        placeholder="Software Developer"
+                    />
                 </div>
                 <div>
-                    <p>Email:</p>
-                    <p>markus.jansen@mediconsult.fi</p>
+                    <h5 className='h5'>Email:</h5>
+                    <input
+                        className='input'
+                        placeholder="markus.jansen@mediconsult.fi"
+                    />
                 </div>
                 <div>
-                    <p>City:</p>
-                    <p>Turku</p>
+                    <h5 className='h5'>City:</h5>
+                    <input
+                        className='input'
+                        placeholder="Turku"
+                    />
+                </div>
+                <div>
+                    <button onClick={clickMe} className='button'>Back to Main Screen</button>
                 </div>
             </div>
         </div>

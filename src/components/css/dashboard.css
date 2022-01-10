@@ -1,0 +1,75 @@
+.h5 {
+  font-weight: normal
+}
+
+.button {
+  margin: 3em 0em 0em;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+/* Left Container */
+
+.flexbox-item-blank {
+  /* background-color: tomato; */
+  min-width: 200px;
+  margin: 10px;
+  padding: 50px 50px;
+}
+
+.image-button {
+  height: 100px;
+  width: 100px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  border: #f3f3f3;
+  cursor: pointer;
+}
+
+.input {
+  border-style: none;
+  border: #2896C2;
+  border-bottom-style: solid;
+  border-width: 0.1em;
+  width: 16em;
+}
+
+/* Right Container */
+
+.flexbox-item {
+  min-width: 300px;
+  margin: 10px;
+  background-color: #f3f3f3;
+  padding: 50px 50px;
+}
+
+.input-right {
+  background-color: #f3f3f3;
+  border-style: none;
+  border: #2896C2;
+  border-bottom-style: solid;
+  border-width: 0.1em;
+  width: 16em;
+}
+
+.flexbox-container-buttons {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  /* background-color: tomato; */
+}
+
+/* Header */
+
+.header-title {
+  display: flex;
+  padding: 0em 1em;
+  border: #2896C2;
+  border-bottom-style: solid;
+  border-width: 0.2em;
+}
+
+.header-h1 {
+  color: #2896C2;
+  font-size: 1.5em;
+}
