@@ -2,6 +2,23 @@ import React from 'react';
 import './css/dashboard.css'
 
 const RightProfile = props => {
+
+    const types = ['Add new', 'Modify', 'Delete'];
+
+    function ToggleGroup(){
+        return <div>
+            {types.map(type => (
+                <button className='button' onClick={clickMe}>
+                    {type}
+                </button>
+            ))}
+        </div>
+    }
+
+    function clickMe() {
+        alert("clickMe() function is working");
+    }
+
     return (
         <div className="flexbox-container">
             <div className="flexbox-item">
@@ -43,6 +60,7 @@ const RightProfile = props => {
                         placeholder="10/01/2022, Monday"
                     />
                 </div>
+                <ToggleGroup />
             </div>
         </div>
     );

@@ -3,44 +3,55 @@
 }
 
 .flexbox-item {
-  width: 200px;
+  width: 300px;
   margin: 10px;
-  border: 3px solid #333;
-  background-color: #dfdfdf;
+  background-color: #f3f3f3;
   padding: 50px 50px;
 }
 
 .flexbox-item-blank {
   width: 200px;
   margin: 10px;
-  background-color: white;
   padding: 50px 50px;
-}
-
-.button {
-  height: 100px;
-  width: 100px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
 }
 
 .h5 {
   font-weight: normal
 }
 
+.button {
+  margin: 3em 0em 0em;
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+/* Left Container */
+
+.image-button {
+  height: 100px;
+  width: 100px;
+  background-color: #f3f3f3;
+  border-radius: 50%;
+  border: #f3f3f3;
+  /* display: inline-block; */
+  cursor: pointer;
+
+}
+
 .input {
   border-style: none;
-  border: turquoise;
+  border: #2896C2;
   border-bottom-style: solid;
   border-width: 0.1em;
   width: 16em;
 }
 
+/* Right Container */
+
 .input-right {
-  background-color: #dfdfdf;
+  background-color: #f3f3f3;
   border-style: none;
-  border: turquoise;
+  border: #2896C2;
   border-bottom-style: solid;
   border-width: 0.1em;
   width: 16em;
@@ -51,12 +62,12 @@
 .header-title {
   display: flex;
   padding: 0em 1em;
-  border: turquoise;
+  border: #2896C2;
   border-bottom-style: solid;
   border-width: 0.2em;
 }
 
 .header-h1 {
-  color: turquoise;
+  color: #2896C2;
   font-size: 1.5em;
 }
