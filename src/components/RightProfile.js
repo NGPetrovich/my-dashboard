@@ -3,27 +3,15 @@ import './css/dashboard.css'
 
 const RightProfile = props => {
 
-    const types = ['Add new', 'Modify', 'Delete'];
-
-    function ToggleGroup(){
-        return <div>
-            {types.map(type => (
-                <button className='button' onClick={clickMe}>
-                    {type}
-                </button>
-            ))}
-        </div>
-    }
-
     function clickMe() {
         alert("clickMe() function is working");
     }
 
     return (
-        <div className="flexbox-container">
+        <div>
             <div className="flexbox-item">
-                <div className='flexbox-item-1'>
-                    <h5>Upcoming Reservation details</h5>
+                <div>
+                    <h5>Upcoming Reservation Details</h5>
                 </div>
                 <div>
                     <h5 className='h5'>City:</h5>
@@ -60,7 +48,17 @@ const RightProfile = props => {
                         placeholder="10/01/2022, Monday"
                     />
                 </div>
-                <ToggleGroup />
+                <div className='flexbox-container-buttons'>
+                    <button className='button' onClick={clickMe}>
+                        Add new
+                    </button>
+                    <button className='button' onClick={clickMe}>
+                        Modify
+                    </button>
+                    <button className='button' onClick={clickMe}>
+                        Delete
+                    </button>
+                </div>
             </div>
         </div>
     );
