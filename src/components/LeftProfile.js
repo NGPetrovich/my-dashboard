@@ -13,7 +13,7 @@ const LeftProfile = () => {
                 <div>
                     <button onClick={clickMe} className='image-button'>upload image</button>
                 </div>
-                <div className='flexbox-item-1'>
+                <div>
                     <h2>Markus Jansen</h2>
                 </div>
                 <div>
