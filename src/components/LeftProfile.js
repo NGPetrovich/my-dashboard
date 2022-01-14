@@ -1,48 +1,47 @@
 import React from 'react';
 import './css/dashboard.css';
+import axios from 'axios';
+import DataParser from './DataParser';
 
-const LeftProfile = () => {
+class LeftProfile extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        userData: []
+      };
+    }
+  
+    componentDidMount() {
+      axios
+        .get("http://localhost:3001/data")
+        .then(response => {
+          this.setState({ userData: response.data })
+        })
+    }
 
-    function clickMe() {
+    clickMe = () => {
         alert("clickMe() function is working");
     }
 
-    return (
-        <div>
-            <div className='flexbox-item-blank'>
-                <div>
-                    <button onClick={clickMe} className='image-button'>upload image</button>
-                </div>
-                <div>
-                    <h2>Markus Jansen</h2>
-                </div>
-                <div>
-                    <h5 className='h5'>Role:</h5>
-                    <input
-                        className='input'
-                        placeholder="Software Developer"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>Email:</h5>
-                    <input
-                        className='input'
-                        placeholder="markus.jansen@mediconsult.fi"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>City:</h5>
-                    <input
-                        className='input'
-                        placeholder="Turku"
-                    />
-                </div>
-                <div>
-                    <button onClick={clickMe} className='button'>Back to Main Screen</button>
+    render() {
+        return (
+            <div>
+                <div className='flexbox-item-blank'>
+                    <div>
+                        <button onClick={this.clickMe} className='image-button'>upload image</button>
+                    </div>
+                    <div>
+                        <h2>Markus Jansen</h2>
+                    </div>
+                    <div>
+                        {this.state.userData.map(item => <DataParser key={item.id} contentData={item} />)}
+                    </div>
+                    <div>
+                        <button onClick={this.clickMe} className='button'>Back to Main Screen</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    )
+        )
+    }
 }
-
 export default LeftProfile;

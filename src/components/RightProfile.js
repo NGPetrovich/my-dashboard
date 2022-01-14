@@ -1,67 +1,53 @@
 import React from 'react';
+import axios from 'axios';
 import './css/dashboard.css'
+import DataParser from './DataParser';
 
-const RightProfile = props => {
+class RightProfile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            reservationData: []
+        };
+    }
 
-    function clickMe() {
+    componentDidMount() {
+        axios
+            .get("http://localhost:3001/reservation")
+            .then(response => {
+                this.setState({ reservationData: response.data })
+            })
+    }
+
+    clickMe = () => {
         alert("clickMe() function is working");
     }
 
-    return (
-        <div>
-            <div className="flexbox-item">
-                <div>
-                    <h5>Upcoming Reservation Details</h5>
-                </div>
-                <div>
-                    <h5 className='h5'>City:</h5>
-                    <input
-                        className='input-right'
-                        placeholder="Turku"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>Building:</h5>
-                    <input
-                        className='input-right'
-                        placeholder="Main Building"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>Room:</h5>
-                    <input
-                        className='input-right'
-                        placeholder="Romeo"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>Spot:</h5>
-                    <input
-                        className='input-right'
-                        placeholder="whole Room"
-                    />
-                </div>
-                <div>
-                    <h5 className='h5'>Date:</h5>
-                    <input
-                        className='input-right'
-                        placeholder="10/01/2022, Monday"
-                    />
-                </div>
-                <div className='flexbox-container-buttons'>
-                    <button className='button' onClick={clickMe}>
-                        Add new
-                    </button>
-                    <button className='button' onClick={clickMe}>
-                        Modify
-                    </button>
-                    <button className='button' onClick={clickMe}>
-                        Delete
-                    </button>
+    render() {
+        return (
+            <div>
+                <div className="flexbox-item">
+                    <div>
+                        <h5>Most Recent Reservation Details:</h5>
+                    </div>
+                    <div>
+                        {this.state.reservationData.map(item => <DataParser key={item.id} contentData={item}/>)}
+                    </div>
+                    <div className='flexbox-container-buttons'>
+                        <button className='button' onClick={this.clickMe}>
+                            Add new
+                        </button>
+                        <button className='button' onClick={this.clickMe}>
+                            Modify
+                        </button>
+                        <button className='button' onClick={this.clickMe}>
+                            Delete
+                        </button>
+                    </div>
                 </div>
             </div>
-        </div>
-    );
+        );
+    }
 };
 
 export default RightProfile;
